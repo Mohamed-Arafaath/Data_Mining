@@ -1,133 +1,120 @@
-Data Mining and Analysis of Vocal Emotions for Predictive Modeling
+# Data Mining and Analysis of Vocal Emotions for Predictive Modeling
+![RAVDESS Dataset](images/ravdess_logo.png)
 
-Overview
-This project, conducted as part of the Master's Degree in Data Science and Business Informatics at the University of Pisa, focuses on applying advanced data mining techniques to the Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS). The objective was to uncover patterns, relationships, and predictive models for vocal emotions, contributing to advancements in audio-based emotion recognition and data science. By leveraging clustering, classification, pattern mining, and regression, the project provides a robust framework for analyzing emotional speech and song data, with applications in fields like human-computer interaction, sentiment analysis, and audio processing.
-Dataset
-The RAVDESS dataset comprises 2452 audio recordings from 24 professional actors (12 male, 12 female) expressing emotions through speech and song in a neutral North American accent. The dataset includes:
+## Overview
+This repository presents a comprehensive data mining project conducted as part of the Master's Degree in Data Science and Business Informatics at the University of Pisa. The project leverages the Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS) to explore vocal emotions through advanced data mining techniques, including clustering, classification, pattern mining, and regression. The goal is to uncover patterns, relationships, and predictive models for vocal emotions, contributing to advancements in audio-based emotion recognition and data science applications like human-computer interaction, sentiment analysis, and audio processing.
 
-Descriptive Attributes: Modality (audio-only), vocal channel (speech or song), emotion (neutral, calm, happy, sad, angry, fearful, disgust, surprised), emotional intensity (normal, strong), statement ("Kids are talking by the door" or "Dogs are sitting by the door"), repetition, actor ID, and sex.
-Technical Attributes: Audio properties like channels, sample width, frame rate, frame width, length (ms), frame count, and intensity (dBFS).
-Statistical Attributes: Features extracted from audio signals, including zero-crossing rate, Mel-Frequency Cepstral Coefficients (MFCC), spectral centroid (SC), and Short-Time Fourier Transform (STFT) chromagram statistics (mean, std, min, max, kurtosis, skewness).
+---
 
-The dataset is accessible here and is well-suited for exploring vocal emotion recognition due to its structured and validated emotional expressions.
-Motivation
-The project aimed to harness data mining techniques to extract meaningful insights from vocal emotion data, addressing the growing need for reliable emotion recognition systems in audio processing. By combining exploratory data analysis, clustering, classification, pattern mining, and regression, the project contributes to the advancement of data science methodologies and their application in understanding human emotions through vocal cues.
-Methodology
-The project was structured into several key phases, each employing specific data mining techniques to analyze the RAVDESS dataset comprehensively:
-1. Data Understanding
+## Problem Statement
+The core objective is to analyze vocal emotion data to extract actionable insights and build predictive models for emotion recognition. The project addresses the following key focus areas:
 
-Conducted an in-depth exploration of the dataset’s 38 attributes, categorizing them into descriptive, technical, and statistical features.
-Visualized variable distributions using histograms, boxplots, and violin plots to identify trends, such as higher intensity for emotions like anger and happiness.
-Performed preliminary statistical analysis, revealing issues like missing values and potential outliers.
+1. **Data Exploration**: Understand the structure, distribution, and quality of the RAVDESS dataset to identify trends and potential issues.
+2. **Clustering**: Group similar audio recordings based on audio features to uncover latent patterns in emotional expressions.
+3. **Classification**: Predict the vocal channel (speech vs. song) using machine learning algorithms to evaluate their performance.
+4. **Pattern Mining**: Extract frequent patterns and association rules to identify relationships between audio features and vocal channels.
+5. **Regression**: Model continuous audio features (e.g., intensity) to assess predictive performance and feature importance.
 
-2. Data Quality
+The project aims to provide a robust framework for analyzing emotional speech and song, with applications in automated audio processing and emotion-aware systems.
 
-Missing Values: Handled missing data in vocal channel (7.99%), intensity (33.28%), and actor (45.92%) attributes. Filled vocal channel with mode, intensity with mean based on correlated attributes, and dropped the actor column due to excessive missing data.
-Variable Transformation: Applied binary encoding for categorical variables (e.g., vocal channel, sex) and ordinal encoding for emotions (0–7 scale). Assessed skewness (0.5) and determined log-transformation unnecessary.
-Correlation and Variable Elimination: Created a correlation matrix to identify and remove redundant attributes (e.g., sample width, frame rate) with single values, reducing dataset dimensionality.
-Outliers: Identified and managed outliers using visualizations to ensure robust analysis.
+---
 
-3. Data Clustering
+## Dataset
+The RAVDESS dataset consists of 2452 audio recordings from 24 professional actors (12 male, 12 female) expressing emotions in a neutral North American accent. The dataset is available [here](https://drive.google.com/drive/folders/1Azcy3wH9dOLdoYisXC3PgyQBDRM42ydY?usp=drive_link) and includes:
 
-Applied three clustering algorithms to group similar audio recordings:
-K-means: Used 12 quantitative attributes (e.g., vocal channel, length_ms, MFCC_min) with Min-Max scaling. Selected k=3 based on the elbow method and silhouette score (0.24), revealing clusters influenced by MFCC_min and frame_count.
-DBSCAN: Identified one cluster and 37 noise points with eps=1.25 and minPts=3, achieving a silhouette score of 0.33. Noise points corresponded to high kurtosis values.
-Agglomerative Hierarchical Clustering: Tested four linkage methods (complete, single, average, Ward’s) with Euclidean distance, selecting Ward’s method for balanced clusters (silhouette score: 0.18).
+- **Descriptive Attributes**: Modality (audio-only), vocal channel (speech or song), emotion (neutral, calm, happy, sad, angry, fearful, disgust, surprised), emotional intensity (normal, strong), statement ("Kids are talking by the door" or "Dogs are sitting by the door"), repetition, actor ID, and sex.
+- **Technical Attributes**: Audio properties like channels, sample width, frame rate, frame width, length (ms), frame count, and intensity (dBFS).
+- **Statistical Attributes**: Extracted features including zero-crossing rate, Mel-Frequency Cepstral Coefficients (MFCC), spectral centroid (SC), and Short-Time Fourier Transform (STFT) chromagram statistics (mean, std, min, max, kurtosis, skewness).
 
+---
 
-Evaluated clustering performance, selecting DBSCAN as the best algorithm due to its higher silhouette score and ability to identify outliers.
+## Project Structure
+The repository is organized into the following folders:
 
-4. Classification
+1. **`code/`**:
+   - Contains Python scripts for data preprocessing, clustering, classification, pattern mining, and regression analyses.
+   - Includes Jupyter notebooks for exploratory data analysis and visualizations.
 
-Focused on predicting the vocal channel (speech vs. song) using three algorithms:
-K-Nearest Neighbors (KNN): Achieved 93.6% accuracy after hyperparameter tuning (k=13, Euclidean distance), with frame_count, emotion, and sc_mean as top contributors (78%, 6.9%, 6.6%).
-Decision Tree: Reached 92.4% accuracy with max_depth=4 and Gini criterion, reducing false predictions from 10.88% to 7.58%. Visualized the tree to interpret splits based on frame_count and emotion.
-Naive Bayes: Gaussian Naive Bayes outperformed Bernoulli and Multinomial variants, achieving 91.3% accuracy with default parameters.
+2. **`visualizations/`**:
+   - Stores plots and figures, such as histograms, violin plots, ROC curves, dendrograms, and confusion matrices.
 
+3. **`dataset/`**:
+   - Provides a link to the RAVDESS dataset and documentation on its structure and attributes.
 
-KNN was identified as the best classifier due to its superior accuracy, F1-score (0.933), and low false prediction rate (6.34%).
+4. **`report/`**:
+   - Contains the detailed project report (`DM1_Report.pdf`) documenting methodologies, results, and insights.
 
-5. Pattern Mining
+---
 
-Discretized eight variables (e.g., vocal channel, frame_count, kurtosis) using quartile-based binning.
-Frequent Pattern Extraction: Analyzed frequent, closed, and maximal itemsets with varying MinSup thresholds. At MinSup=0.14, all 20 patterns were associated with “speech,” highlighting dataset imbalance.
-Association Rule Mining: Extracted 301 rules with MinSup=0.1, MinConf=60%, and minimum 3-item sets. Rules with high lift (>1.6) indicated strong correlations, e.g., low frame_count predicting “speech” (lift=1.796, confidence=0.882).
-Vocal Channel Prediction: Used association rules for classification, achieving 87.3% accuracy on the test set, though outperformed by the Decision Tree classifier.
+## Analysis and Insights
+The project is structured into five key analytical phases, each leveraging specific data mining techniques:
 
-6. Regression
+### 1. Data Understanding
+- **Exploration**: Analyzed 38 attributes, categorizing them into descriptive, technical, and statistical features. Visualized distributions using histograms, boxplots, and violin plots.
+- **Key Insights**: Emotions like anger, fear, and happiness exhibit higher vocal intensity, while sadness is less distinguishable. Gender differences in intensity were minimal.
+- **Preliminary Analysis**: Identified missing values (e.g., 33.28% in intensity) and potential outliers for further processing.
 
-Applied five regression algorithms (Linear, Lasso, Ridge, KNN, Decision Tree) to predict a continuous target (assumed to be intensity or a derived feature).
-Evaluated models using Mean Absolute Error (MAE), Mean Squared Error (MSE), and Root Mean Squared Error (RMSE). KNN Regressor performed best with the lowest RMSE (2.604), indicating robustness against large errors.
+### 2. Data Quality
+- **Missing Values**: Filled vocal channel (7.99%) with mode, intensity (33.28%) with mean based on correlated attributes, and dropped actor (45.92%) due to excessive missing data.
+- **Variable Transformation**: Applied binary encoding for categorical variables (e.g., vocal channel, sex) and ordinal encoding for emotions (0–7 scale). Assessed skewness (0.5) and skipped log-transformation.
+- **Correlation Analysis**: Removed redundant attributes (e.g., sample width, frame rate) with single values to reduce dimensionality.
+- **Outlier Handling**: Managed outliers using visualizations to ensure robust analysis.
 
-Key Findings
+### 3. Data Clustering
+- **Algorithms**:
+  - **K-means**: Clustered 12 quantitative attributes (e.g., vocal channel, length_ms, MFCC_min) with k=3 (silhouette score: 0.24). Influenced by MFCC_min and frame_count.
+  - **DBSCAN**: Identified one cluster and 37 noise points (eps=1.25, minPts=3, silhouette score: 0.33). Noise points corresponded to high kurtosis.
+  - **Agglomerative Hierarchical**: Used Ward’s method for balanced clusters (silhouette score: 0.18).
+- **Best Algorithm**: DBSCAN, due to its higher silhouette score and ability to identify outliers.
 
-Data Insights: Emotions like anger, fear, and happiness exhibit higher vocal intensity, while sadness is less distinguishable. Gender differences in intensity were minimal.
-Clustering: DBSCAN effectively identified a single cluster and outliers, with frame_count and MFCC_min as key differentiators.
-Classification: KNN excelled in predicting vocal channel, leveraging frame_count and emotion features. Decision Trees provided interpretable rules for distinguishing speech from song.
-Pattern Mining: Association rules confirmed strong patterns for “speech” at higher support thresholds, with frame_count and kurtosis as critical predictors.
-Regression: KNN Regressor minimized prediction errors, suitable for applications requiring precise continuous predictions.
+### 4. Classification
+- **Target**: Predicted vocal channel (speech vs. song) using:
+  - **K-Nearest Neighbors (KNN)**: Achieved 93.6% accuracy (k=13, Euclidean distance). Top features: frame_count (78%), emotion (6.9%), sc_mean (6.6%).
+  - **Decision Tree**: Reached 92.4% accuracy (max_depth=4, Gini criterion). Reduced false predictions from 10.88% to 7.58%.
+  - **Naive Bayes**: Gaussian Naive Bayes achieved 91.3% accuracy with default parameters.
+- **Best Classifier**: KNN, with superior accuracy, F1-score (0.933), and low false prediction rate (6.34%).
 
-Tools and Technologies
+### 5. Pattern Mining
+- **Frequent Patterns**: Discretized eight variables (e.g., frame_count, kurtosis) and extracted patterns with varying MinSup. At MinSup=0.14, all 20 patterns were “speech.”
+- **Association Rules**: Extracted 301 rules (MinSup=0.1, MinConf=60%, min 3-item sets). High-lift rules (e.g., lift=1.796) linked low frame_count to “speech.”
+- **Classification**: Used rules for vocal channel prediction, achieving 87.3% accuracy, outperformed by Decision Tree.
 
-Programming Language: Python
-Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, MLxtend (for pattern mining)
-Techniques: Data preprocessing, clustering (K-means, DBSCAN, hierarchical), classification (KNN, Decision Tree, Naive Bayes), pattern mining (FP-growth, association rules), regression (Linear, Lasso, Ridge, KNN, Decision Tree)
+### 6. Regression
+- **Algorithms**: Applied Linear, Lasso, Ridge, KNN, and Decision Tree regressors to predict a continuous feature (assumed intensity).
+- **Performance**: Evaluated using MAE, MSE, and RMSE. KNN Regressor performed best (RMSE: 2.604).
+- **Insight**: KNN minimized prediction errors, suitable for precise continuous predictions.
 
-Contributions
+---
 
-Developed a comprehensive pipeline for analyzing vocal emotion data, from preprocessing to predictive modeling.
-Identified key audio features (frame_count, MFCC_min, sc_mean) driving emotion recognition, with potential applications in audio classification systems.
-Demonstrated the superiority of DBSCAN for clustering and KNN for classification in handling complex audio datasets.
-Provided actionable insights into vocal emotion patterns, enhancing the understanding of emotional expression in speech and song.
+## Key Findings
+- **Emotional Trends**: Anger, fear, and happiness have higher vocal intensity; sadness is less distinguishable.
+- **Clustering**: DBSCAN effectively identified clusters and outliers, driven by frame_count and MFCC_min.
+- **Classification**: KNN excelled in vocal channel prediction, with frame_count as the dominant feature.
+- **Pattern Mining**: High-support patterns favored “speech,” reflecting dataset imbalance.
+- **Regression**: KNN Regressor provided robust predictions with minimal errors.
 
-Future Work
+---
 
-Incorporate additional audio features (e.g., pitch, tempo) to improve model performance.
-Explore deep learning models (e.g., CNNs, RNNs) for enhanced emotion recognition.
-Address dataset imbalance by oversampling “song” instances or using synthetic data generation.
-Extend the analysis to multimodal data (face-and-voice) for a holistic emotion recognition system.
+## Tools and Technologies
+- **Programming Language**: Python
+- **Libraries**: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, MLxtend
+- **Techniques**: Data preprocessing, clustering (K-means, DBSCAN, hierarchical), classification (KNN, Decision Tree, Naive Bayes), pattern mining (FP-growth, association rules), regression (Linear, Lasso, Ridge, KNN, Decision Tree)
 
-Conclusion
-This project showcases a robust application of data mining techniques to analyze vocal emotions, providing valuable insights for audio-based emotion recognition. By systematically addressing data quality, clustering, classification, pattern mining, and regression, the project contributes to the field of data science and informatics. The findings and methodologies can be leveraged in applications like sentiment analysis, virtual assistants, and automated audio processing systems.
-Authors
+---
 
-Mohamed Arafaath Sathik Basha
-Vincenzo Rocchi
-Cristian Ferrara
-Supervised by: Professor Riccardo Guidotti
+## How to Use
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mohamed-Arafaath/Data-Mining-Vocal-Emotions.git
+   ```
+2. Navigate to the code/ folder and run the main script:
+3. Access the dataset via the Google Drive [Google Drive](https://drive.google.com/drive/folders/1Azcy3wH9dOLdoYisXC3PgyQBDRM42ydY?usp=drive_link).
+4. Explore visualizations and the project report in the `visualizations/` and `report/` folders.
+---
 
-Academic Context
-Master’s Degree in Data Science and Business Informatics, University of Pisa, Academic Year 2022–2023.
-Repository Contents
+## 📧 Contact
 
-DM1_Report.pdf: Detailed project report (view here).
-code/: Python scripts for data preprocessing, clustering, classification, pattern mining, and regression.
-visualizations/: Plots and figures (histograms, violin plots, ROC curves, dendrograms, etc.).
-dataset/: Link to the RAVDESS dataset (access here).
+For any questions or feedback, feel free to reach out:
 
-Installation
-
-Clone the repository:git clone <repository-url>
-
-
-Install dependencies:pip install -r requirements.txt
-
-
-Run the main script:python main.py
-
-
-
-Usage
-
-Access the dataset via the provided Google Drive link.
-Run individual scripts in the code/ directory to reproduce specific analyses (e.g., clustering.py, classification.py).
-View visualizations in the visualizations/ directory for insights into data distributions and model performance.
-
-Visualizations
-
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-Contact
-For questions or collaboration opportunities, feel free to reach out via GitHub Issues or email at [your-email@example.com].
-
+- **Author**: [Mohamed Arafaath](https://www.linkedin.com/in/mohamed-arafaath/)
+- **Email**: mohamed_arafaath@outlook.com
