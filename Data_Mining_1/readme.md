@@ -105,10 +105,10 @@ The project is structured into five key analytical phases, each leveraging speci
 ## How to Use
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Mohamed-Arafaath/Data-Mining-Vocal-Emotions.git
+   git clone (https://github.com/Mohamed-Arafaath/Data_Mining/tree/main/Data_Mining_1)
    ```
-2. Navigate to the code/ folder and run the main script:
-3. Access the dataset via the Google Drive [Google Drive](https://drive.google.com/drive/folders/1Azcy3wH9dOLdoYisXC3PgyQBDRM42ydY?usp=drive_link).
+2. Navigate to the `code/` folder and run the main script: DM-1 Project File.ipynb
+3. Access the dataset via the [Google Drive](https://drive.google.com/drive/folders/1Azcy3wH9dOLdoYisXC3PgyQBDRM42ydY?usp=drive_link).
 4. Explore visualizations and the project report in the `visualizations/` and `report/` folders.
 ---
 
