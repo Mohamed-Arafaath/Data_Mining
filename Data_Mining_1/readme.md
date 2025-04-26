@@ -29,24 +29,25 @@ The RAVDESS dataset consists of 2452 audio recordings from 24 professional actor
 ---
 
 ## Project Structure
-The repository contains the following files for the DM-2 project:
 
-1. **`DM-2 Project File.ipynb`**:
-   - A Jupyter notebook containing Python scripts for data preprocessing, binary and multi-class classification, regression, time-series analysis, and explainable AI (XAI).
-   - Includes code for exploratory data analysis, model training, and visualizations.
+The repository contains the following files directly under the `Data_Mining_1/` directory:
 
-2. **`DM2_Report.pdf`**:
-   - The detailed project report documenting methodologies, results, visualizations (e.g., PCA plots, ROC curves, matrix profiles), and discussions for all four modules.
+- **`DM-1 Project File.ipynb`**:
+  - The main Jupyter notebook containing the Python code for the project, including data preprocessing, clustering, classification, pattern mining, regression analyses, and visualizations.
 
-3. **`RAVDESS-Dataset.png`**:
-   - An image file representing the RAVDESS dataset, reused from DM-1, serving as a logo or dataset visualization.
+- **`DM-1_Project_Report.pdf`**:
+  - The comprehensive project report detailing the methodologies, results, discussions, and visualizations used in the analysis of vocal emotions.
 
-4. **`Ravdess_Description.docx`**:
-   - A document describing the RAVDESS dataset’s structure, attributes, and usage, applicable to both DM-1 and DM-2 projects.
+- **`Ravdess_Description.docx`**:
+  - A document providing a detailed description of the RAVDESS dataset, including its structure, attributes, and characteristics.
 
-5. **`dataset/`**:
-   - Provides a link to the RAVDESS dataset hosted on [Google Drive](https://drive.google.com/drive/folders/1Azcy3wH9dOLdoYisXC3PgyQBDRM42ydY?usp=drive_link). Note: The dataset is not stored locally in the repository but is accessible via this link.
+- **`RAVDESS-Dataset.png`**:
+  - An image file visualizing or representing the RAVDESS dataset, used in the project documentation.
 
+- **`readme.md`**:
+  - The main README file providing an overview of the project, problem statement, dataset details, analysis phases, key findings, tools, and usage instructions.
+
+**Note**: The RAVDESS dataset is not included in the repository but is accessible via a [Google Drive link](https://drive.google.com/drive/folders/1Azcy3wH9dOLdoYisXC3PgyQBDRM42ydY?usp=drive_link) provided in the README.
 ---
 
 ## Analysis and Insights
