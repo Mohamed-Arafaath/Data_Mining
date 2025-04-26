@@ -1,5 +1,5 @@
 # Data Mining and Analysis of Vocal Emotions for Predictive Modeling
-![RAVDESS Dataset](images/ravdess_logo.png)
+![RAVDESS Dataset](RAVDESS-Dataset.png)
 
 ## Overview
 This repository presents a comprehensive data mining project conducted as part of the Master's Degree in Data Science and Business Informatics at the University of Pisa. The project leverages the Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS) to explore vocal emotions through advanced data mining techniques, including clustering, classification, pattern mining, and regression. The goal is to uncover patterns, relationships, and predictive models for vocal emotions, contributing to advancements in audio-based emotion recognition and data science applications like human-computer interaction, sentiment analysis, and audio processing.
