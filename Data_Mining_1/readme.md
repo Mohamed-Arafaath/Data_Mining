@@ -47,7 +47,6 @@ The repository contains the following files directly under the `Data_Mining_1/` 
 - **`readme.md`**:
   - The main README file providing an overview of the project, problem statement, dataset details, analysis phases, key findings, tools, and usage instructions.
 
-**Note**: The RAVDESS dataset is not included in the repository but is accessible via a [Google Drive link](https://drive.google.com/drive/folders/1Azcy3wH9dOLdoYisXC3PgyQBDRM42ydY?usp=drive_link) provided in the README.
 ---
 
 ## Analysis and Insights
