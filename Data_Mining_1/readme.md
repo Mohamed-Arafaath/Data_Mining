@@ -29,20 +29,23 @@ The RAVDESS dataset consists of 2452 audio recordings from 24 professional actor
 ---
 
 ## Project Structure
-The repository is organized into the following folders:
+The repository contains the following files for the DM-2 project:
 
-1. **`code/`**:
-   - Contains Python scripts for data preprocessing, clustering, classification, pattern mining, and regression analyses.
-   - Includes Jupyter notebooks for exploratory data analysis and visualizations.
+1. **`DM-2 Project File.ipynb`**:
+   - A Jupyter notebook containing Python scripts for data preprocessing, binary and multi-class classification, regression, time-series analysis, and explainable AI (XAI).
+   - Includes code for exploratory data analysis, model training, and visualizations.
 
-2. **`visualizations/`**:
-   - Stores plots and figures, such as histograms, violin plots, ROC curves, dendrograms, and confusion matrices.
+2. **`DM2_Report.pdf`**:
+   - The detailed project report documenting methodologies, results, visualizations (e.g., PCA plots, ROC curves, matrix profiles), and discussions for all four modules.
 
-3. **`dataset/`**:
-   - Provides a link to the RAVDESS dataset and documentation on its structure and attributes.
+3. **`RAVDESS-Dataset.png`**:
+   - An image file representing the RAVDESS dataset, reused from DM-1, serving as a logo or dataset visualization.
 
-4. **`report/`**:
-   - Contains the detailed project report (`DM1_Report.pdf`) documenting methodologies, results, and insights.
+4. **`Ravdess_Description.docx`**:
+   - A document describing the RAVDESS dataset’s structure, attributes, and usage, applicable to both DM-1 and DM-2 projects.
+
+5. **`dataset/`**:
+   - Provides a link to the RAVDESS dataset hosted on [Google Drive](https://drive.google.com/drive/folders/1Azcy3wH9dOLdoYisXC3PgyQBDRM42ydY?usp=drive_link). Note: The dataset is not stored locally in the repository but is accessible via this link.
 
 ---
 
