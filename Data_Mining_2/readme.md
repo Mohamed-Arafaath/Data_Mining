@@ -29,20 +29,32 @@ The RAVDESS dataset consists of 2452 audio recordings from 24 professional actor
 ---
 
 ## Project Structure
-The repository is organized into the following folders:
 
-1. **`code/`**:
-   - Contains Python scripts for preprocessing, classification, regression, time-series analysis, and XAI.
-   - Includes Jupyter notebooks for exploratory data analysis and visualizations.
+The repository contains the following files directly under the `Data_Mining_2/` directory:
 
-2. **`visualizations/`**:
-   - Stores plots and figures, such as PCA representations, ROC curves, learning curves, matrix profiles, and motif/anomaly visualizations.
+- **`Clustering.ipynb`**:
+  - A Jupyter notebook focused on clustering techniques applied to the RAVDESS dataset, such as K-means, DBSCAN, or hierarchical clustering, to identify patterns in vocal emotions.
 
-3. **`dataset/`**:
-   - Provides a link to the RAVDESS dataset and documentation on its structure and attributes.
+- **`DATA_MINING_2_REPORT_FINAL.pdf`**:
+  - The comprehensive project report detailing the methodologies, results, discussions, and visualizations for advanced classification, time-series analysis, and other data mining techniques applied to vocal emotion recognition.
 
-4. **`report/`**:
-   - Contains the detailed project report (`DM2_Report.pdf`) documenting methodologies, results, and insights.
+- **`Ensemble_Methods.ipynb`**:
+  - A Jupyter notebook implementing ensemble classification methods (e.g., Random Forest, Gradient Boosting, or stacking) to predict vocal emotions or channels in the RAVDESS dataset.
+
+- **`Outliers_Removal.ipynb`**:
+  - A Jupyter notebook dedicated to outlier detection and removal techniques, ensuring robust data preprocessing for the RAVDESS dataset.
+
+- **`RAVDESS-Dataset.png`**:
+  - An image file visualizing or representing the RAVDESS dataset, used in the project documentation to illustrate dataset characteristics.
+
+- **`README.md`**:
+  - The main README file providing an overview of the DM-2 project, problem statement, dataset details, analysis phases, key findings, tools, and usage instructions.
+
+- **`SVM_Classification.ipynb`**:
+  - A Jupyter notebook implementing Support Vector Machine (SVM) classification to predict vocal emotions or channels, including model training and evaluation.
+
+- **`functions.py`**:
+  - A Python script containing reusable functions for data preprocessing, feature engineering, and analysis tasks used across the project's notebooks.
 
 ---
 
