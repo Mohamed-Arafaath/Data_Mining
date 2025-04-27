@@ -83,9 +83,13 @@ The project is structured into five key analytical phases, each leveraging speci
 - **Classification**: Used rules for vocal channel prediction, achieving 87.3% accuracy, outperformed by Decision Tree.
 
 ### 6. Regression
-- **Algorithms**: Applied Linear, Lasso, Ridge, KNN, and Decision Tree regressors to predict a continuous feature (assumed intensity).
-- **Performance**: Evaluated using MAE, MSE, and RMSE. KNN Regressor performed best (RMSE: 2.604).
-- **Insight**: KNN minimized prediction errors, suitable for precise continuous predictions.
+- **Target**: Predicted audio intensity (loudness in dBFS) using:
+  - **Linear Regression**: Achieved RMSE of 2.737 (MAE: 1.944, MSE: 7.491).
+  - **Lasso Regression**: Recorded RMSE of 3.132 (MAE: 2.352, MSE: 9.807).
+  - **Ridge Regression**: Obtained RMSE of 2.716 (MAE: 1.950, MSE: 7.378).
+  - **K-Nearest Neighbors (KNN)**: Attained RMSE of 2.604 (MAE: 2.307, MSE: 6.790).
+  - **Decision Tree**: Yielded RMSE of 2.910 (MAE: 1.752, MSE: 8.466).
+- **Best Regressor**: KNN, with the lowest RMSE (2.604), indicating superior performance in minimizing prediction errors, particularly for large errors.
 
 ---
 
