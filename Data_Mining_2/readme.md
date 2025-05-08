@@ -22,7 +22,7 @@ The project aims to provide a comprehensive framework for emotion recognition, l
 The RAVDESS dataset consists of 2452 audio recordings from 24 professional actors (12 male, 12 female) expressing emotions in a neutral North American accent. The dataset is available [here](https://drive.google.com/drive/folders/1Azcy3wH9dOLdoYisXC3PgyQBDRM42ydY?usp=drive_link) and is processed into two formats:
 
 - **Tabular Dataset**: Used for classification and regression, with 1828 training and 624 test instances, each with 434 features, including:
-  - **Descriptive Attributes**: Modality (audio-only), vocal channel (speech or song), emotion (angry, calm, disgust, fearful, happy, neutral, sad, surprised), emotional intensity (normal, strong), statement ("Kids are talking by the door" or "Dogs are sitting by the door"), repetition, actor, sex, filename.
+  - **Categorical Attributes**: Modality (audio-only), vocal channel (speech or song), emotion (angry, calm, disgust, fearful, happy, neutral, sad, surprised), emotional intensity (normal, strong), statement ("Kids are talking by the door" or "Dogs are sitting by the door"), repetition, actor, sex, filename.
   - **Numerical Attributes**: 425 features derived from audio signals and transformations (Zero Crossing Rate, Mel-Frequency Cepstral Coefficients (MFCC), Spectral Centroid (SC), STFT Chromagram, Lag1), with statistics (sum, mean, std, min, max, kurtosis, skewness) computed across the waveform and quantiles.
 - **Time-Series Dataset**: Used for Module 4, consisting of raw audio files converted to NumPy arrays, padded/truncated to a uniform length of 304,304 samples, with extracted features (MFCC, chroma, spectral contrast, tonnetz, zero-crossing rate, pitch).
 
