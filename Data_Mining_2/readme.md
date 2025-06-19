@@ -2,7 +2,7 @@
 ![RAVDESS Dataset](RAVDESS-Dataset.png)
 
 ## Overview
-This repository presents an advanced data mining project conducted as part of the Master's Degree in Data Science and Business Informatics at the University of Pisa. The project extends the analysis of the Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS) dataset, focusing on sophisticated techniques for binary and multi-class classification, regression, time-series analysis, and explainable AI (XAI). The goal is to enhance emotion recognition through feature selection, outlier detection, handling imbalanced data, and time-series pattern discovery, contributing to applications in audio-based emotion recognition, human-computer interaction, and sentiment analysis.
+This repository presents an advanced data mining project conducted as part of the Data Internship at Synapsia-Al, Italy. The project extends the analysis of the Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS) dataset, focusing on sophisticated techniques for binary and multi-class classification, regression, time-series analysis, and explainable AI (XAI). The goal is to enhance emotion recognition through feature selection, outlier detection, handling imbalanced data, and time-series pattern discovery, contributing to applications in audio-based emotion recognition, human-computer interaction, and sentiment analysis.
 
 ---
 
